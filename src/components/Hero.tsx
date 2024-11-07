@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 
 function Hero() {
   return (
-    <div>
+    <div id="hero">
       <section className="bg-gray-900 text-gray-200 body-font py-24">
         <div className="container mx-auto flex px-6 lg:px-16 py-12 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 flex flex-col items-start text-left mb-16 md:mb-0">

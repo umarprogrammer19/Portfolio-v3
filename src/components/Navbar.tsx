@@ -12,7 +12,7 @@ function Navbar() {
           <span className="ml-3 text-2xl font-bold text-yellow-400">S-J Developer</span>
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center space-x-8">
             {[
-              { href: "/", label: "Home" },
+              { href: "#hero", label: "Home" },
               { href: "#about", label: "About" },
               { href: "#skills", label: "Skills" },
               { href: "#projects", label: "Projects" },
