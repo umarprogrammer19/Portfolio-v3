@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 import Typewriter from "typewriter-effect";
 
@@ -45,12 +46,12 @@ function Hero() {
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mt-12 md:mt-0">
-            <img
+            <Image
               className="object-cover object-center rounded-3xl shadow-xl hover:scale-110 transition-transform duration-500"
               alt="hero"
               height={600}
               width={400}
-              src={"./hijabi.jpg"}
+              src={"/hero.png"}
             />
           </div>
         </div>
