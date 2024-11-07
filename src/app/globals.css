@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .instagram {
     background: radial-gradient(
       circle at 30% 107%,
