@@ -1,49 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import React from 'react';
+import React from "react";
 import { IoMdDownload } from "react-icons/io";
-
 
 function Navbar() {
   return (
-    <div className="bg-yellow-200 z-50 sticky top-0">
-      <header className="text-gray-600 body-font bg-purple-300">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    
-      <span className="ml-3 text-xl text-purple-800 font-bold">S-J Developer</span>
-      <a className="mr-5 hover:text-blue-600"></a>
-    <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-    <Link href="/" className="text-purple-900 font-semibold text-lg mx-5 hover:text-purple-600 transition-colors duration-200">
-  Home
-</Link>
-    <Link href="#about" className="text-purple-900 font-semibold text-lg mx-5 hover:text-purple-600 transition-colors duration-200">
-  About
-</Link>
-<Link href="#skills" className="text-purple-900 font-semibold text-lg mx-5 hover:text-purple-600 transition-colors duration-200">
-  Skills
-</Link>
-<Link href="#projects" className="text-purple-900 font-semibold text-lg mx-5 hover:text-purple-600 transition-colors duration-200">
-  Projects
-</Link>
-<Link href="#contact" className="text-purple-900 font-semibold text-lg mx-5 hover:text-purple-600 transition-colors duration-200">
-  Contacts
-</Link>
-
-    </nav>
-    <a href="/cv.jpg" download="My_CV.jpg">
-    <button className="font-bold text-black inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-        Download CV
-        <IoMdDownload className="text-xl ml-2 text-blue-800"/>
-    </button>
-</a>
-  </div>
-</header>
+    <div className="bg-gray-900 z-50 sticky top-0 shadow-lg">
+      <header className="text-gray-200 body-font">
+        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <span className="ml-3 text-2xl font-bold text-yellow-400">S-J Developer</span>
+          <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center space-x-8">
+            {[
+              { href: "/", label: "Home" },
+              { href: "#about", label: "About" },
+              { href: "#skills", label: "Skills" },
+              { href: "#projects", label: "Projects" },
+              { href: "#contact", label: "Contacts" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-gray-300 font-semibold text-lg hover:text-yellow-500 transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <a href="/cv.jpg" download="My_CV.jpg">
+            <button className="flex items-center bg-yellow-500 text-gray-900 font-bold py-2 px-4 rounded-lg hover:bg-yellow-600 transition duration-200 mt-4 md:mt-0">
+              Download CV
+              <IoMdDownload className="ml-2 text-lg" />
+            </button>
+          </a>
+        </div>
+      </header>
     </div>
-  
-  )
+  );
 }
 
 export default Navbar;
-
-
