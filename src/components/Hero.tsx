@@ -6,10 +6,10 @@ import Typewriter from "typewriter-effect";
 function Hero() {
   return (
     <div>
-      <section className="text-gray-200 body-font bg-gray-900">
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-5xl text-4xl mb-4 font-bold text-yellow-400">
+      <section className="bg-gray-900 text-gray-200 body-font py-24">
+        <div className="container mx-auto flex px-6 lg:px-16 py-12 md:flex-row flex-col items-center">
+          <div className="lg:flex-grow md:w-1/2 flex flex-col items-start text-left mb-16 md:mb-0">
+            <h1 className="title-font sm:text-6xl text-5xl mb-6 font-extrabold text-yellow-400 leading-tight">
               I am
               <br className="hidden lg:inline-block" />
               <Typewriter
@@ -18,22 +18,35 @@ function Hero() {
                   autoStart: true,
                   loop: true,
                   cursor: "|",
-                  delay: 80,
+                  delay: 60,
                   deleteSpeed: 50,
                 }}
               />
             </h1>
-            <div className="w-[120px] h-[2px] bg-yellow-500 mb-6 mx-auto" />
-            <p className="mb-8 leading-relaxed font-medium text-gray-300">
-              I am a skilled Web Developer with a passion for creating user-centric,
-              visually engaging, and highly functional web experiences. <br />
-              With a strong foundation in both front-end development and UI/UX design, 
-              I bridge the gap between design and functionality to deliver seamless digital solutions.
+            <div className="w-[160px] h-[3px] bg-yellow-500 mb-8 mx-auto" />
+            <p className="mb-8 leading-relaxed font-light text-gray-300 max-w-2xl">
+              I am a passionate Web Developer focused on creating user-centered, highly interactive, and visually engaging web experiences. <br />
+              I bridge the gap between design and functionality to deliver seamless digital solutions with expertise in both front-end development and UI/UX design.
             </p>
+            <div className="flex justify-start gap-6">
+              <a
+                href="#contact"
+                className="inline-flex items-center px-8 py-4 bg-yellow-500 text-gray-900 font-semibold rounded-full shadow-lg hover:bg-yellow-600 hover:scale-105 transition-all duration-300 ease-in-out"
+              >
+                Contact Me
+              </a>
+              <a
+                href="/cv.jpg"
+                download="My_CV.jpg"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-yellow-500 text-yellow-500 font-semibold rounded-full shadow-lg hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300 ease-in-out"
+              >
+                Download CV
+              </a>
+            </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mt-12 md:mt-0">
             <img
-              className="object-cover object-center rounded-lg mx-auto shadow-lg"
+              className="object-cover object-center rounded-3xl shadow-xl hover:scale-110 transition-transform duration-500"
               alt="hero"
               height={600}
               width={400}
